@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/repos/dotfiles
+cd ~/.dotfiles
 
 printf "\nHomebrew-Cask\n"
 echo "------------------------------"

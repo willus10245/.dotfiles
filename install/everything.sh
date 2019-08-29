@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/repos/dotfiles
+cd ~/.dotfiles
 
 printf "\n\nInstalling Everything\n"
 echo "=============================="
@@ -19,6 +19,6 @@ if [ "$(uname)" == "Darwin" ]; then
 
 else
 
-  echo 'You are not running OSX.  Please visit ~/repos/dotfiles/install/ and manually run the necessary install scripts.'
+  echo 'You are not running OSX.  Please visit ~/.dotfiles/install/ and manually run the necessary install scripts.'
 
 fi

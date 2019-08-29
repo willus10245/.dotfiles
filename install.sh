@@ -1,10 +1,9 @@
 #!/bin/bash
 
-if [ ! -d "$HOME/repos/dotfiles" ]; then
-  echo 'Cloning jimmay5469/dotfiles'
-  git clone https://github.com/jimmay5469/dotfiles.git ~/repos/dotfiles --origin jimmay5469
-  cd ~/repos/dotfiles
-  git remote set-url --push jimmay5469 git@github.com:jimmay5469/dotfiles.git
+if [ ! -d "$HOME/.dotfiles" ]; then
+  echo 'Cloning willus10245/.dotfiles'
+  git clone https://github.com/willus10245/.dotfiles.git ~/.dotfiles
+  cd ~/.dotfiles
 fi
 
-source ~/repos/dotfiles/install/everything.sh 
+source ~/.dotfiles/install/everything.sh
