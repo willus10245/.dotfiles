@@ -16,6 +16,11 @@ if [ ! "$(brew cask ls | grep dash)" ]; then
   brew cask install dash
 fi
 
+if [ ! "$(brew cask ls | grep docker)" ]; then
+  echo "Installing docker"
+  brew cask install docker
+fi
+
 if [ ! "$(brew cask ls | grep google-chrome)" ]; then
   echo "Installing google-chrome"
   brew cask install google-chrome
