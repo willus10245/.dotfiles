@@ -11,6 +11,11 @@ fi
 
 echo "Installing homebrew packages"
 
+if [ ! "$(brew ls --versions autoconf)" ]; then
+  echo "Installing autoconf"
+  brew install autoconf
+fi
+
 if [ ! "$(brew ls --versions coreutils)" ]; then
   echo "Installing coreutils"
   brew install coreutils
@@ -38,6 +43,7 @@ fi
 
 if [ ! "$(brew ls --versions skhd)" ]; then
   echo "Installing skhd"
+  brew tap koekeishiya/formulae
   brew install skhd
 fi
 

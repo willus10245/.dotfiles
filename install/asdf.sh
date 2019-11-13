@@ -6,9 +6,7 @@ echo "------------------------------"
 
 if test ! $(which asdf); then
   echo "Installing asdf"
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.3.0
-
-  source $HOME/.shellrc
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.4
 fi
 
 if [ ! "$(asdf plugin-list | grep elixir)" ]; then
@@ -26,15 +24,15 @@ if [ ! "$(asdf plugin-list | grep erlang)" ]; then
   asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 fi
 
-if [ ! "$(asdf plugin-list | grep java)" ]; then
-  echo "Installing java plugin"
-  asdf plugin-add java https://github.com/skotchpine/asdf-java
-fi
-
 if [ ! "$(asdf plugin-list | grep nodejs)" ]; then
   echo "Installing node plugin"
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
   bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+fi
+
+if [ ! "$(asdf plugin-list | grep postgis)" ]; then
+  echo "Installing postgis plugin"
+  asdf plugin-add postgis https://github.com/francois/asdf-postgis.git
 fi
 
 if [ ! "$(asdf plugin-list | grep postgres)" ]; then

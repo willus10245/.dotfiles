@@ -28,6 +28,7 @@ fi
 
 if [ ! "$(brew cask ls | grep firefox-developer-edition)" ]; then
   echo "Installing firefox-developer-edition"
+  brew tap homebrew/cask-versions
   brew cask install firefox-developer-edition
 fi
 
@@ -39,6 +40,11 @@ fi
 if [ ! "$(brew cask ls | grep kitty)" ]; then
   echo "Installing kitty"
   brew cask install kitty
+fi
+
+if [ ! "$(brew cask ls | grep spotify)" ]; then
+  echo "Installing spotify"
+  brew cask install spotify
 fi
 
 if [ ! "$(brew cask ls | grep visual-studio-code)" ]; then

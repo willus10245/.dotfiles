@@ -31,6 +31,7 @@ export HOMEBREW_GITHUB_API_TOKEN=5d24bd2f667bac8db887604ae82b829a9f5e3df9
 # Switch escape and caps if tty:
 # sudo -n loadkeys ~/.scripts/ttymaps.kmap 2>/dev/null
 export PATH="/usr/local/opt/libressl/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export PATH="~/.asdf/installs/rust/1.36.0/bin:$PATH"
 
@@ -40,3 +41,7 @@ export PATH="~/.asdf/installs/rust/1.36.0/bin:$PATH"
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+export SECRET_KEY_BASE="Rg9vy/CZ4OvyvNd+uxMymUA9z5IiwTae7ztc0Kxj5oc9AzdbMf4VCgzybvT4LIQl"
+
+export PATH="$PATH:`yarn global bin`" 

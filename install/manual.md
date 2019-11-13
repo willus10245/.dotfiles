@@ -1,8 +1,7 @@
-Manual Installation Steps
-=========================
+# Manual Installation Steps
 
-VS Code Settings:
------------------
+## VS Code Settings:
+
 ```js
 {
   "color-highlight.markRuler": false,
@@ -11,10 +10,10 @@ VS Code Settings:
   "editor.fontFamily": "Dank Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 15,
-  "editor.formatOnSave": false,
-  "[javascript]": {
-    "editor.formatOnSave": false
-  },
+  "editor.formatOnSave": true,
+  // "[javascript]": {
+  //   "editor.formatOnSave": false
+  // },
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "eslint.alwaysShowStatus": true,
@@ -55,18 +54,21 @@ VS Code Settings:
   "gitlens.views.lineHistory.location": "gitlens",
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.search.location": "gitlens",
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 ```
 
-App store installs:
--------------------
+## App store installs:
+
 - Monosnap
 - Bear
 - Space Gremlin
 
-OSX Setup
----------
+## OSX Setup
+
 - Accessability Settings
   - Enable 3 finger drag
 - Trackpad
@@ -98,42 +100,42 @@ OSX Setup
       - Edit `[name].local` so 0.0.0.0 can be accessed from phones on the network at `http://[name].local`
 - Add `~/` and `Mackintosh HD` directories to Finder favorites
 
-iCloud Setup
-------------
+## iCloud Setup
+
 - In `Preferences` > `iCloud` > `iCloud Drive Options` uncheck `Optimize Mac Storage`
 
-1Password Setup
----------------
+## 1Password Setup
+
 - Log in using 1Password account
 
-iTerm Setup
------------
+## iTerm Setup
+
 - In iTerm2 `Preferences` > `General` set `Load preferences from a custom folder or URL` to `iCloud/iTerm2`
 - Check `Save changes to folder when iTerm2 quits`
 - Run `base16_tomorrow`
 
-Alfred Setup
-------------
+## Alfred Setup
+
 - In 1Password, find `Alfred` in the `Primary` vault and use the license key to activate the Alfred Powerpack.
 - In the `Advanced` tab click `Set sync folder...` and choose `iCloud/Alfred`.
 
-Dash Setup
-----------
+## Dash Setup
+
 - In 1Password, find `Dash` in the `Primary` vault and open the `license.dash-license` attachment.
 - In the Dash `Preferences` click `Set Up Syncing` > `Set Sync Folder` and choose `iCloud/Dash`.
 
-Chrome Setup
-------------
+## Chrome Setup
+
 - Install 1password extension
 - Login
 
-GitHub Setup
-------------
+## GitHub Setup
+
 - GitHub SSH key ([Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/) and [Working with SSH key passphrases](https://help.github.com/articles/working-with-ssh-key-passphrases/))
 - Run `ssh-add -K ~/.ssh/id_rsa`
 
-Google Photos Uploader
-----------------------
+## Google Photos Uploader
+
 - Log in
 - Choose originals in preferences
 - Add Apple Photos Library to folders
