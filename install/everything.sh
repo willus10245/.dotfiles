@@ -15,7 +15,9 @@ if [ "$(uname)" == "Darwin" ]; then
 
   source install/asdf.sh
 
-  # source install/vim.sh
+  source install/vim.sh
+
+  source install/vscode-extensions.sh
 
 else
 

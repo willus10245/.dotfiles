@@ -20,18 +20,12 @@ done
 
 echo "Special Cases"
 
-echo "  ~/.config/nvim -> ~/.vim"
-rm -rf ~/.config/nvim
-mkdir -p ~/.config
-ln -s ~/.vim ~/.config/nvim
-
 echo "  ~/.config/nvim/init.vim ~/.vimrc"
 rm -rf ~/.config/nvim/init.vim
 mkdir -p ~/.config/nvim
 ln -s ~/.vimrc ~/.config/nvim/init.vim
 
-echo "  ~/.config/kitty/kitty.conf -> ./.kittyrc"
-rm -rf ~/.kittyrc
+echo "  ~/.config/kitty/kitty.conf -> ~/.kittyrc"
 rm -rf ~/.config/kitty/kitty.conf
 mkdir -p ~/.config/kitty
-ln -s ./kittyrc ~/.config/kitty/kitty.conf
+ln -s ~/.kittyrc ~/.config/kitty/kitty.conf

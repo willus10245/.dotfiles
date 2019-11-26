@@ -3,4 +3,4 @@ cd ~/.dotfiles/install
 
 while read ext; do
   code --install-extension $ext
-done <vscode-extensions.txt
+done < vscode-extensions.txt

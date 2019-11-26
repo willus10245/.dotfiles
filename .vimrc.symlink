@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Ctrl-P - Fuzzy file search
 Plugin 'kien/ctrlp.vim'
 " Remove extraneous whitespace when edit mode is exited
-Plugin 'thirtythreefour/lessspace.vim'
+Plugin 'thirtythreeforty/lessspace.vim'
 
 " Status bar mods
 Plugin 'bling/vim-airline'

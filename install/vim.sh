@@ -4,8 +4,9 @@ cd ~/.dotfiles
 printf "\nVim\n"
 echo "------------------------------"
 
-if [ ! -e ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ ! -e ~/.config/nvim/bundle ]; then
+  mkdir -p ~/.config/nvim/bundle
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
 fi
 
 echo "Installing vim plugins"

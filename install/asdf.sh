@@ -9,6 +9,8 @@ if test ! $(which asdf); then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.4
 fi
 
+source ~/.bash_profile
+
 if [ ! "$(asdf plugin-list | grep elixir)" ]; then
   echo "Installing elixir plugin"
   asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
