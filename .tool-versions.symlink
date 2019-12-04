@@ -6,5 +6,5 @@ postgres 11.2
 postgis 2.5.3
 python 3.8.0
 ruby 2.6.0
-yarn 1.17.3
-rust 1.38.0
+yarn 1.19.2
+rust 1.39.0
