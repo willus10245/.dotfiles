@@ -10,12 +10,15 @@ cyan="\[\033[0;36m\]"
 reset="\[\033[0m\]"
 
 # Change command prompt
+source $HOME/.dotfiles/scripts/user-at-host.sh
 source $HOME/.dotfiles/scripts/git-prompt.sh
+export MYENV_USER="KON8007"
+export MYENV_HOST="OF060WW0LNJG5JL"
 export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
-export PS1="$cyan\u$green\$(__git_ps1)$blue \W $ $reset"
+export PS1="$cyan$( __user_at_host_ps1 )$green\$(__git_ps1)$blue \W $ $reset"
 
 alias ll='ls -laGh'
 alias l='ls -lGh'
@@ -44,4 +47,4 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 export SECRET_KEY_BASE="Rg9vy/CZ4OvyvNd+uxMymUA9z5IiwTae7ztc0Kxj5oc9AzdbMf4VCgzybvT4LIQl"
 
-export PATH="$PATH:`yarn global bin`" 
+export PATH="$PATH:`yarn global bin`"
