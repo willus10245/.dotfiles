@@ -10,7 +10,9 @@ cyan="\[\033[0;36m\]"
 reset="\[\033[0m\]"
 
 # Change command prompt
+export PROXY_STATE_FILE=$HOME/.dotfiles/state/proxystatus
 source $HOME/.dotfiles/scripts/user-at-host.sh
+source $HOME/.dotfiles/scripts/proxy-ps1.sh
 source $HOME/.dotfiles/scripts/git-prompt.sh
 export MYENV_USER="KON8007"
 export MYENV_HOST="OF060WW0LNJG5JL"
@@ -18,9 +20,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
 # '\W' adds the name of the current directory
-export PS1="$cyan$( __user_at_host_ps1 )$green\$(__git_ps1)$blue \W $ $reset"
+export PS1="\$( __proxy_ps1 )$cyan\$( __user_at_host_ps1 )$green\$(__git_ps1)$blue \W $ $reset"
 
-alias ll='ls -laGh'
+alias ll='ls -lAGh'
 alias l='ls -lGh'
 alias c='clear'
 alias mkd='mkdir -pv'
@@ -36,7 +38,7 @@ export HOMEBREW_GITHUB_API_TOKEN=5d24bd2f667bac8db887604ae82b829a9f5e3df9
 export PATH="/usr/local/opt/libressl/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-export PATH="~/.asdf/installs/rust/1.36.0/bin:$PATH"
+export PATH="~/.asdf/installs/rust/1.39.0/bin:$PATH"
 
 . $HOME/.asdf/asdf.sh
 
