@@ -1,0 +1,24 @@
+[color]
+	ui = auto
+[core]
+	safecrlf = true
+	editor = code --wait
+[push]
+	default = upstream
+[merg]
+	conflictstyle = diff3
+[user]
+	email = dscottwiggins@gmail.com
+	name = Scott
+[alias]
+        amend = commit --amend --reuse-message=HEAD
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	pr = pull --rebase
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+
