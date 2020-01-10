@@ -32,16 +32,6 @@ if [ ! "$(asdf plugin-list | grep nodejs)" ]; then
   bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 fi
 
-if [ ! "$(asdf plugin-list | grep postgis)" ]; then
-  echo "Installing postgis plugin"
-  asdf plugin-add postgis https://github.com/francois/asdf-postgis.git
-fi
-
-if [ ! "$(asdf plugin-list | grep postgres)" ]; then
-  echo "Installing postgres plugin"
-  asdf plugin-add postgres https://github.com/smashedtoatoms/asdf-postgres.git
-fi
-
 if [ ! "$(asdf plugin-list | grep python)" ]; then
   echo "Installing python plugin"
   asdf plugin-add python https://github.com/tuvistavie/asdf-python.git

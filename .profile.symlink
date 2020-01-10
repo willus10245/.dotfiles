@@ -1,0 +1,29 @@
+export MYENV_USER="scottwiggins"
+export MYENV_HOST="Scotts-MBP.home"
+
+alias ll='ls -lAGh'
+alias l='ls -lGh'
+alias c='clear'
+alias mkd='mkdir -pv'
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
+# Switch escape and caps if tty:
+# sudo -n loadkeys ~/.scripts/ttymaps.kmap 2>/dev/null
+export PATH="/usr/local/opt/libressl/bin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+export PATH="~/.asdf/installs/rust/1.39.0/bin:$PATH"
+
+. $HOME/.asdf/asdf.sh
+
+# . $HOME/.asdf/completions/asdf.bash
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+export SECRET_KEY_BASE="Rg9vy/CZ4OvyvNd+uxMymUA9z5IiwTae7ztc0Kxj5oc9AzdbMf4VCgzybvT4LIQl"
+
+export PATH="$PATH:`yarn global bin`"
