@@ -24,6 +24,3 @@
         tug = pull --rebase
 [url "ssh://git@github.com/"]
         insteadOf = https://github.com/
-[remote "home"]
-        url = git@scottwiggins.xyz:/var/www/git/dotfiles.git
-        fetch = +refs/heads/*:refs/remotes/home/*
