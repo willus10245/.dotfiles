@@ -1,5 +1,12 @@
 export MYENV_USER="scottwiggins"
-export MYENV_HOST="Scotts-MBP.home"
+export HOME_HOST="Scotts-MBP"
+export WORK_HOST="zeruel"
+export MA_HOST="morleyc-lap.mikealbert.corp"
+export EDITOR="$(whence code) --goto"
+
+export WORKSPACE="~/projects/ma"
+export SSH_PATH="~/.ssh"
+export AWS_CREDENTIALS="~/.aws"
 
 alias ll='ls -lAGh'
 alias l='ls -lGh'
@@ -17,9 +24,14 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 export PATH="~/.asdf/installs/rust/1.39.0/bin:$PATH"
 
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+
 . $HOME/.asdf/asdf.sh
 
-# . $HOME/.asdf/completions/asdf.bash
+. $HOME/.asdf/completions/asdf.bash
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

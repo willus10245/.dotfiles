@@ -21,4 +21,9 @@
 	type = cat-file -t
 	dump = cat-file -p
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
-
+        tug = pull --rebase
+[url "ssh://git@github.com/"]
+        insteadOf = https://github.com/
+[remote "home"]
+        url = git@scottwiggins.xyz:/var/www/git/dotfiles.git
+        fetch = +refs/heads/*:refs/remotes/home/*

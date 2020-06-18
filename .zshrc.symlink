@@ -1,5 +1,6 @@
 # colors!
 green="%F{2}"
+yellow="%F{3}"
 blue="%F{12}"
 cyan="%F{51}"
 
@@ -10,13 +11,8 @@ GIT_PS1_SHOWDIRTYSTATE=1
 # '$(__user_at_host_ps1)' adds the name of the current user to the prompt
 # '$(__git_ps1)' adds git-related stuff
 # '%~' adds the name of the current directory
-setopt PROMPT_SUBST ; PS1='$cyan$( __user_at_host_ps1 )$green$(__git_ps1 " (%s)")$blue %c \$ %f'
+setopt PROMPT_SUBST ; PS1='$cyan$( __user_at_host_ps1 )$green$(__git_ps1 " (%s)")$blue %c $yellow\$ %f'
 # setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
-
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
 
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
@@ -27,6 +23,13 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+
+# History search
+autoload -U history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 export KEYTIMEOUT=1
 
@@ -56,5 +59,9 @@ echo -ne '\e[5 q'
 # Use beam shape cursor for each new prompt.
 preexec() { echo -ne '\e[5 q' ;}
 
+# Enable direnv
+eval "$(direnv hook zsh)"
+
 # Load zsh-syntax-highlighting; should be last.
 source /usr/local/Cellar/zsh-syntax-highlighting/0.6.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"

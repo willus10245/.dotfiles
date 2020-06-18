@@ -13,8 +13,6 @@ if [ "$(uname)" == "Darwin" ]; then
 
   source install/symlinks.sh
 
-  source install/scripts.sh
-
   source install/asdf.sh
 
   source install/vim.sh
