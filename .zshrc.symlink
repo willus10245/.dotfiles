@@ -4,15 +4,16 @@ yellow="%F{3}"
 blue="%F{12}"
 cyan="%F{51}"
 
-source $HOME/.dotfiles/scripts/user-at-host.sh
-source $HOME/.dotfiles/scripts/git-prompt.sh
+# source $HOME/.dotfiles/scripts/user-at-host.sh
+# source $HOME/.dotfiles/scripts/git-prompt.sh
 
-GIT_PS1_SHOWDIRTYSTATE=1
+# GIT_PS1_SHOWDIRTYSTATE=1
 # '$(__user_at_host_ps1)' adds the name of the current user to the prompt
 # '$(__git_ps1)' adds git-related stuff
 # '%~' adds the name of the current directory
-setopt PROMPT_SUBST ; PS1='$cyan$( __user_at_host_ps1 )$green$(__git_ps1 " (%s)")$blue %c $yellow\$ %f'
 # setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
+
+# setopt PROMPT_SUBST ; PS1='$cyan$( __user_at_host_ps1 )$green$(__git_ps1 " (%s)")$blue %c $yellow\$ %f'
 
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
@@ -60,8 +61,11 @@ echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;}
 
 # Enable direnv
+eval "$(asdf exec direnv hook zsh)"
+
 eval "$(direnv hook zsh)"
 
 # Load zsh-syntax-highlighting; should be last.
-source /usr/local/Cellar/zsh-syntax-highlighting/0.6.0/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(starship init zsh)"

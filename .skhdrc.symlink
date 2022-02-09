@@ -218,7 +218,7 @@
 #                          osascript -e 'display notification "⚠️ Deserialized!" with title "🔎 Chunkwm" sound name "Tink"';
 
 # open terminal
-ctrl + cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
+ctrl + cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # focus window
 alt - h : yabai -m window --focus west

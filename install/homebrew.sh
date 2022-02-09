@@ -53,9 +53,3 @@ if [ ! "$(brew ls --versions yabai)" ]; then
   brew install yabai
 fi
 
-if [ ! "$(brew ls --versions zathura)" ]; then
-  echo "Installing zathura"
-  brew tap zegervdv/zathura
-  brew install zathura
-  brew install zathura-pdf-poppler
-fi

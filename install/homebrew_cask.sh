@@ -6,6 +6,11 @@ echo "------------------------------"
 
 echo "Installing homebrew casks"
 
+if [ ! "$(brew cask ls | grep alacritty)" ]; then
+  echo "Installing alacritty"
+  brew cask install alacritty
+fi
+
 if [ ! "$(brew cask ls | grep alfred)" ]; then
   echo "Installing alfred"
   brew cask install alfred
@@ -35,11 +40,6 @@ fi
 if [ ! "$(brew cask ls | grep insomnia)" ]; then
   echo "Installing insomnia"
   brew cask install insomnia
-fi
-
-if [ ! "$(brew cask ls | grep kitty)" ]; then
-  echo "Installing kitty"
-  brew cask install kitty
 fi
 
 if [ ! "$(brew cask ls | grep spotify)" ]; then

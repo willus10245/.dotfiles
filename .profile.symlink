@@ -1,12 +1,11 @@
 export MYENV_USER="scottwiggins"
 export HOME_HOST="Scotts-MBP"
 export WORK_HOST="zeruel"
-export MA_HOST="morleyc-lap.mikealbert.corp"
 export EDITOR="$(whence code) --goto"
 
-export WORKSPACE="~/projects/ma"
-export SSH_PATH="~/.ssh"
-export AWS_CREDENTIALS="~/.aws"
+# build erlang docs
+export KERL_BUILD_DOCS="yes"
+# export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl@1.1)"
 
 alias ll='ls -lAGh'
 alias l='ls -lGh'
@@ -22,7 +21,7 @@ fi
 export PATH="/usr/local/opt/libressl/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
-export PATH="~/.asdf/installs/rust/1.39.0/bin:$PATH"
+export PATH="~/.asdf/installs/rust/stable/bin:$PATH"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
@@ -31,11 +30,20 @@ compinit
 
 . $HOME/.asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit
+compinit
 
 # Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
 
 export SECRET_KEY_BASE="Rg9vy/CZ4OvyvNd+uxMymUA9z5IiwTae7ztc0Kxj5oc9AzdbMf4VCgzybvT4LIQl"
 
 export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:~/.dotfiles/scripts/restart-pg"
+
+export POSTGRES_EXTRA_CONFIGURE_OPTIONS="--with-openssl --with-libraries=/usr/local/lib:/usr/local/opt/openssl@1.1/lib --with-includes=/usr/local/include:/usr/local/opt/openssl@1.1/include"
+
+eval "$(gh completion -s zsh)"

@@ -42,4 +42,6 @@ yabai -m config window_gap                   10
 
 yabai -m rule --add app="^Firefox Developer Edition$" manage=on
 
+yabai -m rule --add app="^game$" manage=off
+
 echo "yabai configuration loaded.."
