@@ -3,8 +3,10 @@
 [core]
 	safecrlf = true
 	editor = code --wait
+	excludesFile = ~/.gitignore
 [push]
 	default = upstream
+	autoSetupRemote = true
 [merge]
 	conflictstyle = diff3
 [user]
@@ -19,8 +21,10 @@
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
   tug = pull --rebase
 	please = push --force-with-lease origin HEAD
 #[url "ssh://git@github.com/"]
 #        insteadOf = https://github.com/
+[init]
+	defaultBranch = main

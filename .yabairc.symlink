@@ -40,7 +40,7 @@ yabai -m config left_padding                 20
 yabai -m config right_padding                20
 yabai -m config window_gap                   10
 
-yabai -m rule --add app="^Firefox Developer Edition$" manage=on
+# yabai -m rule --add app="^Firefox Developer Edition$" manage=on
 
 yabai -m rule --add app="^game$" manage=off
 

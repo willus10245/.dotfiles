@@ -63,9 +63,11 @@ preexec() { echo -ne '\e[5 q' ;}
 # Enable direnv
 eval "$(asdf exec direnv hook zsh)"
 
-eval "$(direnv hook zsh)"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="$PATH:$HOME/bin"
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"

@@ -5,7 +5,7 @@ export EDITOR="$(whence code) --goto"
 
 # build erlang docs
 export KERL_BUILD_DOCS="yes"
-# export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl@1.1)"
+export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl@1.1)"
 
 alias ll='ls -lAGh'
 alias l='ls -lGh'
